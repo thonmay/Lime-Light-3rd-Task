@@ -1,0 +1,195 @@
+/* Custom Styles for [Your Name]'s Personal Website */
+
+:root {
+    --primary-dark: #2c3e50; /* Midnight Blue */
+    --secondary-light: #ecf0f1; /* Clouds */
+    --accent-color: #1abc9c; /* Turquoise */
+    --text-on-dark: #ffffff;
+    --text-on-light: #34495e; /* Wet Asphalt */
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+body {
+    padding-top: 56px; /* For fixed navbar */
+    font-family: var(--body-font);
+    color: var(--text-on-light);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+/* --- Navigation --- */
+#mainNav {
+    background-color: var(--primary-dark);
+    transition: background-color 0.3s ease-in-out;
+}
+
+#mainNav .navbar-brand {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+#mainNav .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.75rem 1rem;
+    letter-spacing: 0.05em;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active { 
+    color: var(--text-on-dark);
+}
+
+#mainNav.navbar-scrolled { /* Optional: style for scrolled navbar */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* --- Masthead (Home Section) --- */
+.masthead {
+    padding-top: calc(6rem + 72px); 
+    padding-bottom: 6rem;
+    background-color: var(--primary-dark); 
+
+}
+
+.masthead .masthead-heading {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+}
+
+.masthead .masthead-subheading {
+    font-size: 1.25rem;
+}
+
+.divider-custom {
+    margin: 1.25rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider-custom .divider-custom-line {
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    background-color: var(--accent-color); /* Accent color for lines */
+    border-radius: 1rem;
+}
+.divider-custom.divider-light .divider-custom-line {
+    background-color: var(--text-on-dark);
+}
+.divider-custom .divider-custom-icon {
+    color: var(--accent-color); 
+    font-size: 2rem; 
+    padding: 0 1rem;
+}
+.divider-custom.divider-light .divider-custom-icon {
+    color: var(--text-on-dark);
+}
+
+
+/* --- Page Sections --- */
+.page-section {
+    padding: 6rem 0;
+}
+
+.page-section .page-section-heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+    color: var(--primary-dark);
+}
+.page-section.bg-light .page-section-heading {
+    color: var(--primary-dark);
+}
+
+.page-section p.lead {
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+/* --- Portfolio Section --- */
+#portfolio .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+#portfolio .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+#portfolio .card .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+#portfolio .card .btn-primary:hover {
+    background-color: #17a78a; /* Darken accent */
+    border-color: #17a78a;
+}
+
+/* --- Skills Section --- */
+#skills .skill-item {
+    margin-bottom: 1rem;
+}
+#skills .skill-item h4 {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-on-light);
+}
+
+/* --- Favourites Section (Accordion) --- */
+#favourites .accordion-button {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+#favourites .accordion-button:not(.collapsed) {
+    color: var(--text-on-dark);
+    background-color: var(--accent-color);
+}
+#favourites .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(26, 188, 156, 0.25); /* Accent color focus */
+}
+#favourites .accordion-body {
+    font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 3rem 0;
+    background-color: var(--primary-dark);
+    color: var(--text-on-dark);
+}
+.footer p {
+    margin-bottom: 0.25rem;
+}
+
+
+/* Responsive Adjustments */
+@media (min-width: 992px) {
+    body {
+        padding-top: 0; 
+    }
+    #mainNav {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        
+    }
+    #mainNav .navbar-brand {
+        font-size: 1.75em;
+        transition: font-size 0.3s;
+    }
+    #mainNav.navbar-shrink {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: var(--primary-dark);
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        font-size: 1.25em;
+    }
+    
+}
